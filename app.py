@@ -91,9 +91,8 @@ with st.sidebar:
         "Upload one or more PDFs", type=["pdf"], accept_multiple_files=True
     )
 
-    with st.expander("Advanced settings"):
-        chunk_size = st.number_input("Chunk size", value=1000, step=100, min_value=100)
-        chunk_overlap = st.number_input("Chunk overlap", value=200, step=50, min_value=0)
+    chunk_size = 1000
+    chunk_overlap = 200
 
     process_clicked = st.button(
         "Process documents", type="primary", disabled=not uploaded_files
